@@ -131,7 +131,7 @@ def main():
                     asset_files = [{"file": asset_file, "type": "text/html", "idx": 0}]
                 else:
                     raise Exception("Can't find asset file: " + str(asset_file))
-                asset_data["properties"]["files"] = [{"uri": "", "type": "image/png"}]
+                asset_data["properties"]["files"] = [{"uri": "", "type": "text/html"}]
         except Exception as ex:
             logging.error(ex)
             logging.error("Can't find all assets for json file: " + str(jsonfile) + ", skipping")
