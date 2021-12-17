@@ -126,9 +126,9 @@ def main():
                     else:
                         raise Exception("Can't find asset file: " + str(asset_file))
             else:
-                asset_file = jsonfile.replace(".json", ".png")
+                asset_file = jsonfile.replace(".json", ".html")
                 if os.path.isfile(asset_file):
-                    asset_files = [{"file": asset_file, "type": "image/png", "idx": 0}]
+                    asset_files = [{"file": asset_file, "type": "text/html", "idx": 0}]
                 else:
                     raise Exception("Can't find asset file: " + str(asset_file))
                 asset_data["properties"]["files"] = [{"uri": "", "type": "image/png"}]
