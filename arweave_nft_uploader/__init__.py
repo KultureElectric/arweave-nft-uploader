@@ -157,6 +157,7 @@ def main():
                     if not has_asset_image and asset_fileext == "html":
                         has_asset_image = True
                         asset_data["image"] = uri
+                        asset_data["animation_url"] = uri
             if not has_asset_image:
                 logging.error("At least one png image is required for json file: " + str(jsonfile) + ", skipping")
                 num_upload_errors += 1
